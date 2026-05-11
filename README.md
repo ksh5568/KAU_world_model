@@ -58,32 +58,47 @@ kau_world/
 
 ## 설치
 
+### 1. PX4 worlds 디렉토리로 이동 후 클론
+
 ```bash
-cd ~/ros2_ws/src
+cd ~/PX4-Autopilot/Tools/simulation/gz/worlds
 git clone https://github.com/ksh5568/kau_world.git
 ```
 
-리소스 경로를 환경 변수에 등록합니다.
+### 2. 월드 파일 배치
+
+클론한 저장소 안의 파일들을 `worlds/` 디렉토리로 이동합니다.
 
 ```bash
-export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:~/ros2_ws/src/kau_world
+mv kau_world/kau_world.sdf .
+mv kau_world/kau_world ./
+```
+
+완료 후 디렉토리 구조는 다음과 같아야 합니다.
+
+```
+PX4-Autopilot/Tools/simulation/gz/worlds/
+├── kau_world.sdf       # 월드 파일
+├── kau_world/          # 모델 디렉토리 (model.config, model.sdf, meshes/)
+└── ...                 # 기존 PX4 월드 파일들
 ```
 
 ---
 
 ## 실행
 
+### PX4 SITL 연동 실행
+
+PX4-Autopilot 루트 디렉토리에서 실행합니다.
+
+```bash
+PX4_GZ_WORLD=kau_world PX4_GZ_MODEL_POSE="0,0,0" make px4_sitl gz_x500
+```
+
 ### Gazebo 단독 실행
 
 ```bash
-gz sim ~/ros2_ws/src/kau_world/kau_world.sdf
-```
-
-### PX4 SITL 연동 실행
-
-```bash
-# PX4-Autopilot 디렉토리에서
-PX4_GZ_WORLD=kau_world ./build/px4_sitl_default/bin/px4
+gz sim ~/PX4-Autopilot/Tools/simulation/gz/worlds/kau_world.sdf
 ```
 
 ---
