@@ -26,7 +26,7 @@
           <geometry>
             <mesh>
               <scale>0.75 0.75 0.75</scale>
-              <uri>model://kau_world/meshes/kau_ground/kau_building_v2.dae</uri>
+              <uri>model://kau_world/meshes/kau_building_v2.dae</uri>
             </mesh>
           </geometry>
           <surface>
@@ -41,7 +41,7 @@
           <geometry>
             <mesh>
               <scale>0.75 0.75 0.75</scale>
-              <uri>model://kau_world/meshes/kau_ground/kau_building_v2.dae</uri>
+              <uri>model://kau_world/meshes/kau_building_v2.dae</uri>
             </mesh>
           </geometry>
         </visual>
