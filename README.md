@@ -62,7 +62,7 @@ kau_world/
 
 ```bash
 cd ~/PX4-Autopilot/Tools/simulation/gz/worlds
-git clone https://github.com/ksh5568/kau_world.git
+git clone https://github.com/ksh5568/KAU_world_model.git
 ```
 
 ### 2. 월드 파일 배치
