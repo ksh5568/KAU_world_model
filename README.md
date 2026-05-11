@@ -105,7 +105,7 @@ gz sim ~/PX4-Autopilot/Tools/simulation/gz/worlds/kau_world.sdf
 
 ## 저자
 
-- **Sunghyun Kim** — kimsh315331@kau.kr
+- **Seonghyun Kim** — kimsh315331@kau.kr
 
 ---
 
