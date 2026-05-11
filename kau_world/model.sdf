@@ -1,19 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <sdf version="1.9">
-  <world name="aircraft">
-    <include>
-      <name>go2</name>
-      <!-- 시작 위치(필요시 z를 0.2~0.4 정도로) -->
-      <pose>0 1.0 0.2 0 0 3.14</pose>
-
-      <!-- 로컬 파일 include: file:// URI 권장 -->
-      <uri>file:///home/iram1/PX4-Autopilot/Tools/simulation/gz/worlds/go2/model.sdf</uri>
-    </include>
-    <include>
-      <name>rover_differential</name>
-      <pose>0 -1.0 0.1 0 0 3.14</pose>
-      <uri>file:///home/iram1/PX4-Autopilot/Tools/simulation/gz/worlds/rover_differential/model.sdf</uri>
-    </include>
+  <world name="kau_world">
     <physics type="ode">
       <max_step_size>0.004</max_step_size>
       <real_time_factor>1.0</real_time_factor>
@@ -27,6 +14,9 @@
       <ambient>0.4 0.4 0.4 1</ambient>
       <background>0.7 0.7 0.7 1</background>
       <shadows>true</shadows>
+      <sky>
+        <clouds>true</clouds>
+      </sky>
     </scene>
     <model name="ground_plane">
       <pose>0 0 0 0 0 0</pose>
@@ -36,7 +26,7 @@
           <geometry>
             <mesh>
               <scale>0.75 0.75 0.75</scale>
-              <uri>model://kau_ground/kau_building_v2.dae</uri>
+              <uri>model://meshes/kau_ground/kau_building_v2.dae</uri>
             </mesh>
           </geometry>
           <surface>
@@ -51,7 +41,7 @@
           <geometry>
             <mesh>
               <scale>0.75 0.75 0.75</scale>
-              <uri>model://kau_ground/kau_building_v2.dae</uri>
+              <uri>model://meshes/kau_ground/kau_building_v2.dae</uri>
             </mesh>
           </geometry>
         </visual>
