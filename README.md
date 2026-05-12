@@ -1,4 +1,4 @@
-![kau world model](background.png)
+![kau world model](background_2.png)
 
 # kau_world
 
