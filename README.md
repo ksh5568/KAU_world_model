@@ -1,3 +1,5 @@
+![kau world model](background.png)
+
 # kau_world
 
 PX4 SITL + Gazebo Harmonic 환경에서 사용 가능한 **한국항공대학교(KAU) 시뮬레이션 월드** 패키지입니다.
