@@ -94,12 +94,13 @@ PX4-Autopilot/Tools/simulation/gz/worlds/
 PX4-Autopilot 루트 디렉토리에서 실행합니다.
 
 ```bash
-PX4_GZ_WORLD=kau_world PX4_GZ_MODEL_POSE="0,0,0" make px4_sitl gz_x500
+PX4_GZ_WORLD=kau_world PX4_GZ_MODEL_POSE="0,0,0.2" make px4_sitl gz_x500
 ```
 
 ### Gazebo 단독 실행
 
 ```bash
+export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:~/PX4-Autopilot/Tools/simulation/gz/worlds
 gz sim ~/PX4-Autopilot/Tools/simulation/gz/worlds/kau_world.sdf
 ```
 
