@@ -100,6 +100,7 @@ PX4_GZ_WORLD=kau_world PX4_GZ_MODEL_POSE="0,0,0.2" make px4_sitl gz_x500
 ### Gazebo 단독 실행
 
 ```bash
+export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:~/PX4-Autopilot/Tools/simulation/gz/worlds
 gz sim ~/PX4-Autopilot/Tools/simulation/gz/worlds/kau_world.sdf
 ```
 
